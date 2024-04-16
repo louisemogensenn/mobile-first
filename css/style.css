@@ -1,0 +1,71 @@
+/* En selector, så alt får den samme font fra start*/
+* {
+    font-family: Barlow, 'Times New Roman', Times, serif; /* Den ønskede font er importeret med Google Fonts og hedder Barlow. Hvis denne ikke kan vises på hjemmesiden er Times New Roman et sekundært alternativ */
+}
+
+/* Varable til at gøre koden mere simpel */
+:root {
+    --baggrundsfarve: #F7BABF;
+    --skyggefarve: rgb(243, 112, 134);
+    --skriftfarve: #000000;
+}
+
+/* Baggrundsfarven i body */
+body {
+    background-color: var(--baggrundsfarve);
+}
+
+/* Alle link har ingen underline og er ikke lilla/blå */
+a {
+    text-decoration: none;
+    color: var(--skriftfarve);
+}
+
+#logoOgBurgermenuId {
+    display: flex; /* Logo og burgermenu i samme container, så det med flex kan komme på linje*/
+    gap: 5%; /* Afstand mellem logo og burgermenu */
+}
+
+#burgermenuId {
+    width: 10%; /* Sætter størrelsen på burgermenuen */
+    height: 10%;
+    margin-top: 2%; /* Afstand fra top til ikon*/
+}
+
+#logoId {
+    width: 60%; /* Størrelsen på logoet */
+    margin: 3% 0 0 5%; /* Afstande fra hhv. t, h, b, v*/
+}
+
+#lacanaImgId {
+    width: 20%; /* Størrelsen på billedet, der vises på desktop*/
+}
+
+#mobileForsideId {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50%;
+}
+
+#forsideKnapId {
+    padding: 2% 4%; /* Padding omkring MENU på forsiden*/
+    background-color: var(--skyggefarve);
+}
+
+/*
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+*/
+
+/* Når skærmens størrelse er maksimalt 479 pixels vil udseendet være som nedstående */
+@media screen and (max-width: 1000px) { /* Ændres til 479px */
+
+    /* INDEX */
+    #desktopForsideId, #desktopButtonsId {
+        display: none; /* Links i navigation og billede forsvinder - må gerne ske meget før */
+    }
+}
